@@ -1,0 +1,11 @@
+- name: Azure create resourcegroup
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create a resource group
+    azure_rm_resourcegroup:
+     name: myResourceGroupAnsible
+     location: eastus
+     tags:
+        testing: testing
+        delete: never
