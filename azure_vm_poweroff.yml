@@ -1,0 +1,9 @@
+- name: Azure VM Poweroff
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Power Off
+    azure_rm_virtualmachine:
+     resource_group: myResourceGroupAnsible
+     name: myVM
+     started: no

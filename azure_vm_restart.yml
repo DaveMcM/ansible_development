@@ -1,0 +1,9 @@
+- name: Azure VM Restart
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Restart VM
+    azure_rm_virtualmachine:
+     resource_group: myResourceGroupAnsible
+     name: myVM
+     restarted: yes

@@ -1,0 +1,9 @@
+- name: Azure VM Poweron
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Power on
+    azure_rm_virtualmachine:
+     resource_group: myResourceGroupAnsible
+     name: myVM
+     started: yes

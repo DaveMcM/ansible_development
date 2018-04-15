@@ -1,0 +1,10 @@
+- name: Azure VM Remove
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Remove VM
+    azure_rm_virtualmachine:
+     resource_group: myResourceGroupAnsible
+     name: myVM
+     state: absent
+     remove_on_absent: all
